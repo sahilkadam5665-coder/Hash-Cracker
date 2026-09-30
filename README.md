@@ -1,21 +1,48 @@
-# Hash-Cracker
-This tool highlights the risks of weak password practices by attempting to crack hashed passwords using different attack strategies. It is designed for educational and security research purposes, showing why strong password policies are essential in any system.
-# Setup
-1 Save the code I gave you into a file called cracker.py.
-2 Make sure you have Python 3 installed (check with python --version).
-3 Open a terminal (Command Prompt, PowerShell, or Linux shell).
-4 Navigate to the folder where cracker.py is saved.
+# 🔑 Password Cracker Tool
+# 📖 Overview
+The Password Cracker is a Python-based security tool that demonstrates how weak passwords can be exploited. It attempts to crack hashed passwords using different attack strategies, highlighting the importance of strong password policies in real-world systems.
 
-# RUNNING OF THE TOOL
-1. Dictionary Attack
-   If you have a wordlist file (e.g., rockyou.txt), run:
+# ✨ Features
+- Supports multiple hashing algorithms (MD5, SHA1, SHA256, etc.).
+- Dictionary Attack: Tests passwords against a wordlist file (e.g., rockyou.txt).
+- Brute Force Attack: Generates all possible combinations up to a specified length.
+- Modular command-line interface with flexible options for mode, hash type, wordlist, and maximum length.
+- Extensible design for adding rainbow tables, multiprocessing, and custom character sets.
 
-   python cracker.py --mode dictionary --hash <hash_here> --wordlist rockyou.txt --algo sha256
+# 🛠️ Tech Stack
+- Language: Python 3
+- Libraries: hashlib, argparse, itertools
 
-   (Replace <hash_here> with the actual hash you want to crack.)
+# ⚙️ Installation
+-Clone the repository and navigate into the project folder:
+ bash:
+ # git clone https://github.com/your-username/password-cracker.git
+ cd password-cracker
 
-2. Brute Force Attack
+# 🚀 Usage
+ - Run the tool from the command line:
+ - Dictionary Attack
+   bash:
+   # python cracker.py --mode dictionary --hash <hash_here> --wordlist rockyou.txt --algo sha256
 
-   python cracker.py --mode bruteforce --hash <hash_here> --max-length 4 --algo md5
+ -  Brute Force Attack
+   bash:
+   #  python cracker.py --mode bruteforce --hash <hash_here> --max-length 4 --algo md5
 
-   (--max-length sets the maximum password length to try.)
+# 📂 Project Structure
+  - Code
+password-cracker/
+
+│── cracker.py        # Main script
+
+│── README.md         # Documentation
+
+# 🔮 Future Enhancements
+- Rainbow table lookup for faster cracking.
+- Multithreading/multiprocessing for speed.
+- Custom character sets for brute force.
+- Logging cracked results to a file.
+
+# ⚠️ Disclaimer
+- This tool is for educational and security research purposes only.
+- Do not use it against systems without explicit permission. Unauthorized password cracking may be illegal.
